@@ -62,7 +62,7 @@ This repository includes a GitHub Actions workflow (`.github/workflows/check_app
   3. Compares the new output against the existing files.
   4. **Commits and Pushes** only if changes are detected. If the data hasn't changed, the workflow exits cleanly without creating empty commits.
 
-## 🔧 Technical Notes
+## Technical Notes
 
 ### Requirements
 
@@ -70,6 +70,6 @@ This repository includes a GitHub Actions workflow (`.github/workflows/check_app
 * `requests`
 * `beautifulsoup4`
 
-## 📜 License
+## License
 
 This project is licensed under the **GNU General Public License v3.0**.
