@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -37,7 +38,6 @@ jobs:
           
           if git diff --staged --quiet; then
             echo "No changes detected. Exiting gracefully."
-            # "Fail pass": Explicitly exit with code 0 to mark step as success
             exit 0
           else
             git commit -m "Daily update: Apple domains and ports"
