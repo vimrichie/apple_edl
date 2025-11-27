@@ -11,6 +11,7 @@ permissions:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,11 +33,12 @@ jobs:
         run: |
           git config --global user.name "Automated Scraper"
           git config --global user.email "actions@github.com"
-          
           git add domains.txt ports.txt
           
           if git diff --staged --quiet; then
-            print("No changes detected. Skipping commit.")
+            echo "No changes detected. Exiting gracefully."
+            # "Fail pass": Explicitly exit with code 0 to mark step as success
+            exit 0
           else
             git commit -m "Daily update: Apple domains and ports"
             git push
