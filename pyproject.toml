@@ -1,0 +1,11 @@
+[project]
+name = "apple-edl"
+version = "0.1.0"
+description = "Apple Enterprise Networks External Dynamic List"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+    "urllib3>=2.5.0",
+]

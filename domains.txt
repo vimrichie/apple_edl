@@ -3,6 +3,7 @@
 *.apple-livephotoskit.com
 *.apple-mapkit.com
 *.apps-marketplace.apple.com
+*.apps.apple.com
 *.apzones.com
 *.business.apple.com
 *.cdn-apple.com
