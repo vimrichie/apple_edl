@@ -85,4 +85,4 @@ This repository includes a GitHub Actions workflow (`.github/workflows/check_app
 
 ## License
 
-This project is licensed under the **GNU General Public License v3.0**.
+This project is licensed under the GNU General Public License v3.0.
