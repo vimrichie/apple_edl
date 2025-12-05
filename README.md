@@ -58,7 +58,7 @@ uv sync
 Use `uv run` to execute the script inside the managed environment automatically.
 
 ```bash
-uv run applescrape.py
+uv run apple_domain_check.py
 ```
 
 ## Automation (GitHub Actions)
@@ -68,15 +68,16 @@ This repository includes a GitHub Actions workflow (`.github/workflows/check_app
 * **Schedule:** Runs daily at **10:00 AM PST** (18:00 UTC).
 * **Logic:**
   1. Spins up an Ubuntu runner.
-  2. Sets up `uv` for fast environment caching.
-  3. Executes the extraction script.
-  4. **Commits and Pushes** only if changes are detected. If the data hasn't changed, the workflow exits cleanly without creating empty commits.
+  2. Sets up Python 3.10 with pip dependency caching.
+  3. Installs dependencies from `requirements.txt`.
+  4. Executes the extraction script (`apple_domain_check.py`).
+  5. **Commits and Pushes** only if changes are detected. If the data hasn't changed, the workflow exits cleanly without creating empty commits.
 
 ## Technical Notes
 
 ### Requirements
-* **uv** (Package & Project Manager)
-* Python 3.12+ (Managed automatically by `uv` via `.python-version`)
+* **uv** (Package & Project Manager) - for local development
+* Python 3.10+ (GitHub Actions uses Python 3.10, local development uses version from `.python-version`)
 
 ### Dependencies
 * `requests`
